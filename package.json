@@ -1,0 +1,33 @@
+{
+  "name": "create-code-base",
+  "version": "1.0.0",
+  "description": "Start with code base",
+  "bin": "bin/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/hieu3011999/code-base.git"
+  },
+  "keywords": [
+    "code base",
+    "nestjs",
+    "nextjs",
+    "reactjs",
+    "next",
+    "react",
+    "ssr",
+    "server",
+    "api",
+    "typescript"
+  ],
+  "author": "Hieu Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/hieu3011999/code-base/-/issues"
+  },
+  "homepage": "https://gitlab.com/hieu3011999/code-base/-/blob/master/README.md",
+  "dependencies": {
+    "boxen": "^5.0.1",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.1.2"
+  }
+}
