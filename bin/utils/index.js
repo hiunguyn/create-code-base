@@ -108,7 +108,7 @@ module.exports.showMessage = (options) => {
     borderColor: "green",
   };
 
-  const starting = chalk`{white.bold Move to your project:\n\n$ cd ${options.projectName}\n\n}{cyan.bold Happy Hacking 😎 From ${options.author} with 😍😍😍}`;
+  const starting = chalk`{cyan.bold Hello ${options.author} 👋\n\n}{white.bold Move to your project:\n\n$ cd ${options.projectName}\n\n}{cyan.bold Happy Hacking 😎 From Hieu Nguyen with 😍😍😍}`;
   console.log(boxen(starting, boxenOptions));
 };
 
@@ -130,7 +130,7 @@ module.exports.postProcess = (options) => {
   }
 };
 
-const createDirectoryContents = (
+module.exports.createDirectoryContents = (
   templatePath,
   projectName,
   author,
@@ -157,7 +157,7 @@ const createDirectoryContents = (
       mkdirSync(join(currDir, projectName, file));
 
       // recursive call
-      createDirectoryContents(
+      this.createDirectoryContents(
         join(templatePath, file),
         join(projectName, file),
         author,
@@ -166,5 +166,3 @@ const createDirectoryContents = (
     }
   });
 };
-
-module.exports.createDirectoryContents = createDirectoryContents

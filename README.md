@@ -25,11 +25,11 @@ $ npx create-code-base --name=<project name> --template=<template name>
 ## Global install
 
 ```bash
-$ npm install nestjs-code-base -g
+$ npm install create-code-base -g
 
 or
 
-$ sudo install nestjs-code-base -g (for mac)
+$ sudo install create-code-base -g (for mac)
 ```
 
 #### Use as cli

@@ -34,6 +34,17 @@ const QUESTIONS = [
         return "Project name may only include letters, numbers, underscores and hashes.";
     },
   },
+  {
+    name: "author",
+    type: "input",
+    message: "Author project:",
+    when: () => !ARGV.author,
+    validate: (input) => {
+      if (/^.+$/.test(input)) return true;
+      else
+        return "Author project is required.";
+    },
+  },
 ];
 
 prompt(QUESTIONS).then(async (answers) => {
@@ -41,16 +52,16 @@ prompt(QUESTIONS).then(async (answers) => {
 
   const projectChoice = answers.template;
   const projectName = answers.name;
+  const author = answers.author;
   const templatePath = join(__dirname, "templates", projectChoice);
   const tartgetPath = join(CURR_DIR, projectName);
-  const author = "Hieu Nguyen";
 
   const options = {
     projectName,
+    author,
     templateName: projectChoice,
     templatePath,
     tartgetPath,
-    author,
   };
 
   if (!createProject(tartgetPath)) {
