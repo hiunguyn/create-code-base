@@ -3,24 +3,27 @@
 ## Quick start
 
 ```bash
-$ npx create-code-base
+$ npx create-code-base [options]
 
 or
 
-$ npm init code-base
-
-or
-
-$ npx create-code-base --name=<project name> --template=<template name>
+$ npm init code-base [options]
 ```
 
 #### Options
 
+[--name=<project name\>] [--author=<author project\>] [--template=<template name \>]
+
 - --name: Name of the project you want to create
+- --author: Author of the project you want to create
 - --template: Template of the project you want to create<br/>
   template names: [nestjs-code-base | nextjs-code-base]
 
-  example command: `$ npx create-code-base --name=my-project --template=nestjs-code-base`
+  example command:
+
+```bash
+$ npx create-code-base --name=my-project --auhtor='My name' --template=nestjs-code-base
+```
 
 ## Global install
 
@@ -35,11 +38,7 @@ $ sudo install create-code-base -g (for mac)
 #### Use as cli
 
 ```bash
-$ create-code-base
-
-or
-
-$ create-code-base --name=<project name> --template=<template name>
+$ create-code-base [options]
 ```
 
 ## Documents
