@@ -43,9 +43,9 @@ $ create-code-base [options]
 
 ## Documents
 
-- [NestJs code base](https://github.com/hieubeo0/create-test-app/tree/master/bin/templates/nestjs-code-base#readme)
-- [NextJs code base](https://github.com/hieubeo0/create-test-app/tree/master/bin/templates/nextjs-code-base#readme)
+- [NestJs code base](https://github.com/hieubeo0/create-code-base/tree/master/bin/templates/nestjs-code-base#readme)
+- [NextJs code base](https://github.com/hieubeo0/create-code-base/tree/master/bin/templates/nextjs-code-base#readme)
 
 ## Issues
 
-[Issues in gitlab](https://gitlab.com/hieu3011999/code-base/-/issues)
+[Issues on github](https://github.com/hieubeo0/create-code-base/issues)
