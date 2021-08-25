@@ -133,7 +133,7 @@ module.exports.postProcess = (options) => {
 module.exports.createDirectoryContents = (
   templatePath,
   projectName,
-  author,
+  options,
   currDir
 ) => {
   const filesToCreate = readdirSync(templatePath);
@@ -147,7 +147,9 @@ module.exports.createDirectoryContents = (
     if (stats.isFile()) {
       let contents = readFileSync(origFilePath, "utf8");
 
-      if (file === 'package.json') contents = render(contents, { projectName, author });
+      if (file === 'package.json' || file === 'app.json') {
+        contents = render(contents, { projectName, appName: options.appName, author: options.author });
+      }
 
       if (file === "gitignore") file = ".gitignore";
 
@@ -160,7 +162,7 @@ module.exports.createDirectoryContents = (
       this.createDirectoryContents(
         join(templatePath, file),
         join(projectName, file),
-        author,
+        options,
         currDir
       );
     }

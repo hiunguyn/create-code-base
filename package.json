@@ -1,6 +1,6 @@
 {
   "name": "create-code-base",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Start a new project with code base",
   "bin": "bin/index.js",
   "repository": {
