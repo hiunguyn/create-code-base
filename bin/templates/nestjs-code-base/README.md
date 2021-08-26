@@ -17,7 +17,7 @@ A progressive <a href="http://nodejs.org" target="_blank">Node.js</a>framework f
 
 ```bash
 # copy environment
-$ cp .env.docer .env
+$ cp .env.docker .env
 
 # run docker
 $ docker-compose up -d --build

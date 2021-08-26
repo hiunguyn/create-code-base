@@ -28,11 +28,11 @@ $ npm init code-base [options]
   example command:
 
 ```bash
-$ npx create-code-base --project-name=my-project --auhtor='My Name' --template=nestjs-code-base
+$ npx create-code-base --project-name=my-project --author='My Name' --template=nestjs-code-base
 
 or
 
-$ npx create-code-base --project-name=my-project --app-name='My App' --auhtor='My Name' --template=react-native
+$ npx create-code-base --project-name=my-project --app-name='My App' --author='My Name' --template=react-native
 ```
 
 ## Global install
