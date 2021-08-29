@@ -148,7 +148,7 @@ module.exports.QUESTIONS = [
     type: "input",
     message: "App name:",
     when: (answers) =>
-      !this.ARGV["app-name"] && answers.template === "react-native",
+      !this.ARGV["app-name"] && answers.template === CHOICES[2],
     validate: (input) => {
       if (/^.+$/.test(input)) return true
       else return "App name is required."
