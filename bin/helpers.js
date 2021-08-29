@@ -1,4 +1,4 @@
-const { existsSync, readFileSync, writeFileSync } = require("fs")
+const { existsSync, readFileSync, writeFileSync, rmSync } = require("fs")
 const { join } = require("path")
 const { spawn, spawnSync, exec } = require("child_process")
 const chalk = require("chalk")
@@ -46,7 +46,7 @@ const useNpm = () => {
   return child.status === 0
 }
 
-const cloneProject = (options) => {
+const downloadProject = (options) => {
   return new Promise((resolve, reject) => {
     if (existsSync(options.tartgetPath)) {
       console.log(
@@ -70,6 +70,10 @@ const cloneProject = (options) => {
         reject()
         return
       }
+      rmSync(join(options.tartgetPath, ".git"), {
+        recursive: true,
+        force: true,
+      })
       console.log(chalk.green(`🥳 Project downloaded successfully!`))
       resolve()
     })
@@ -200,7 +204,7 @@ module.exports.installPackage = (options) => {
 
 module.exports.createProject = async (options) => {
   try {
-    await cloneProject(options)
+    await downloadProject(options)
 
     const packageJsonPath = join(options.tartgetPath, "package.json")
     const appJsonPath = join(options.tartgetPath, "app.json")
