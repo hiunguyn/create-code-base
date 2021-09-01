@@ -136,11 +136,11 @@ module.exports.QUESTIONS = [
     message: "Project name:",
     when: () =>
       !this.ARGV["project-name"] ||
-      !/^[a-z]([a-z\-\d])*$/.test(this.ARGV["project-name"]),
+      !/^[a-z][a-z\d]*(\-[a-z\d]+)*$/.test(this.ARGV["project-name"]),
     validate: (input) => {
-      if (/^([A-Za-z\-\_\d])+$/.test(input)) return true
+      if (/^[a-z][a-z\d]*(\-[a-z\d]+)*$/.test(input)) return true
       else
-        return 'Project name does not match the pattern of "/^[a-z]([a-z\\-\\d])*$/"'
+        return 'Project name does not match the pattern of "^[a-z][a-z\\d]*(\\-[a-z\\d]+)*$"'
     },
   },
   {
@@ -165,6 +165,13 @@ module.exports.QUESTIONS = [
     },
   },
 ]
+
+module.exports.capitalizeFirstLetter = (value, index) => {
+  if (index && /^[a-z]$/.test(value[0])) {
+    return value[0].toUpperCase() + value.slice(1)
+  }
+  return value
+}
 
 module.exports.createGitRepo = () => {
   return new Promise((resolve) => {

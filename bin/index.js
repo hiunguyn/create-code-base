@@ -10,6 +10,7 @@ const {
   ARGV,
   CURR_DIR,
   QUESTIONS,
+  capitalizeFirstLetter,
 } = require("./helpers")
 
 prompt(QUESTIONS).then(async (answers) => {
@@ -19,7 +20,10 @@ prompt(QUESTIONS).then(async (answers) => {
     template: answers.template,
     projectName: answers["project-name"],
     displayName: answers["app-name"] && answers["app-name"].trim(),
-    name: answers["project-name"].replace(new RegExp("-", "g"), ""),
+    name: answers["project-name"]
+      .split("-")
+      .map((value, index) => capitalizeFirstLetter(value, index))
+      .join(""),
     author: answers.author.trim(),
     tartgetPath: join(CURR_DIR, answers["project-name"]),
   }
