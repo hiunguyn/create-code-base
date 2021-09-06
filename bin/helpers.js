@@ -6,10 +6,10 @@ const boxen = require("boxen")
 
 const CHOICES = ["nestjs-base", "nextjs-base", "react-native-base"]
 const GIT_REPO = {
-  "nestjs-base": "https://github.com/hieunguyen300199/nestjs-base.git",
-  "nextjs-base": "https://github.com/hieunguyen300199/nextjs-base.git",
+  "nestjs-base": "https://github.com/hiunguyn/nestjs-base.git",
+  "nextjs-base": "https://github.com/hiunguyn/nextjs-base.git",
   "react-native-base":
-    "https://github.com/hieunguyen300199/react-native-base.git",
+    "https://github.com/hiunguyn/react-native-base.git",
 }
 
 const argvToObject = () => {
