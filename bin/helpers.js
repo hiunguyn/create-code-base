@@ -4,10 +4,11 @@ const { spawn, spawnSync, exec } = require("child_process")
 const chalk = require("chalk")
 const boxen = require("boxen")
 
-const CHOICES = ["nestjs-base", "nextjs-base", "react-native-base"]
+const CHOICES = ["nestjs-base", "nextjs-base", "reactjs-webpack", "react-native-base"]
 const GIT_REPO = {
   "nestjs-base": "https://github.com/hiunguyn/nestjs-base.git",
   "nextjs-base": "https://github.com/hiunguyn/nextjs-base.git",
+  "reactjs-webpack": "https://github.com/hiunguyn/reactjs-webpack.git",
   "react-native-base":
     "https://github.com/hiunguyn/react-native-base.git",
 }
@@ -148,7 +149,7 @@ module.exports.QUESTIONS = [
     type: "input",
     message: "App name:",
     when: (answers) =>
-      !this.ARGV["app-name"] && answers.template === CHOICES[2],
+      !this.ARGV["app-name"] && answers.template === CHOICES[3],
     validate: (input) => {
       if (/^.+$/.test(input)) return true
       else return "App name is required."

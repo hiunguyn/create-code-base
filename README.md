@@ -22,7 +22,7 @@ $ npm init code-base [options]
 - --app-name: The name of your React Native App you want to create
 - --author: Author of the project you want to create
 - --template: Template of the project you want to create<br />
-  template names: [nestjs-base | nextjs-base | react-native-base]<br />
+  template names: [nestjs-base | nextjs-base | reactjs-wepack | react-native-base]<br />
   If the template is not `react-native` then argument --app-name is not necessary
 
   example command:
@@ -56,6 +56,7 @@ $ create-code-base [options]
 
 - [NestJs code base](https://github.com/hiunguyn/nestjs-base#readme)
 - [NextJs code base](https://github.com/hiunguyn/nextjs-base#readme)
+- [ReactJs webpack](https://github.com/hiunguyn/reactjs-webpack#readme)
 - [React Native code base](https://github.com/hiunguyn/react-native-base#readme)
 
 ## Issues
