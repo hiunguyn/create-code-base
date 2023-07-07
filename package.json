@@ -1,6 +1,6 @@
 {
   "name": "create-code-base",
-  "version": "1.1.4",
+  "version": "1.1.6",
   "description": "Start a new project with code base",
   "bin": "bin/index.js",
   "repository": {
@@ -31,6 +31,7 @@
   "dependencies": {
     "boxen": "^5.0.1",
     "chalk": "^4.1.2",
+    "cross-spawn": "^7.0.3",
     "inquirer": "^8.1.2"
   }
 }

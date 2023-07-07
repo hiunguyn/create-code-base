@@ -1,6 +1,7 @@
 const { existsSync, readFileSync, writeFileSync, rmSync } = require("fs")
 const { join } = require("path")
-const { spawn, spawnSync, exec } = require("child_process")
+const { spawnSync, exec } = require("child_process")
+const spawn = require("cross-spawn")
 const chalk = require("chalk")
 const boxen = require("boxen")
 
@@ -85,13 +86,12 @@ const postProcessNode = (options) => {
   process.chdir(options.tartgetPath)
 
   let cmd = ""
-  let args = []
+  const args = ["install", "--ignore-scripts"]
 
   if (useYarn()) {
     cmd = "yarn"
-  } else if (useNpm) {
+  } else {
     cmd = "npm"
-    args = ["install"]
   }
 
   return new Promise((resolve) => {
